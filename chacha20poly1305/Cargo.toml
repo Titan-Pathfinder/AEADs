@@ -22,7 +22,7 @@ aead = { version = "0.4", default-features = false }
 chacha20 = { version = "0.7", features = ["zeroize"], optional = true }
 cipher = "0.3"
 poly1305 = "0.7"
-zeroize = { version = ">=1, <1.4", default-features = false }
+zeroize = { version = "1", default-features = false }
 
 [dev-dependencies]
 aead = { version = "0.4", features = ["dev"], default-features = false }
@@ -34,7 +34,7 @@ alloc = ["aead/alloc"]
 heapless = ["aead/heapless"]
 stream = ["aead/stream"]
 xchacha20 = ["chacha20/xchacha"]
-xchacha20poly1305 = ["xchacha20"] # alias
+xchacha20poly1305 = ["xchacha20"]                                     # alias
 reduced-round = ["chacha20-reduced-round", "xchacha20-reduced-round"]
 chacha20-reduced-round = ["chacha20"]
 xchacha20-reduced-round = ["xchacha20"]
